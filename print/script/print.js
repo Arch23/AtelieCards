@@ -1,5 +1,5 @@
 import {productList, expandFlavors} from "./memory.js";
-import { calculateCardsPerPage, createCard, createPage } from "./structure.js";
+import { calculateCardsPerPage, createCard, createPage } from "./print-structure.js";
 
 const createPagesAndCards = () => {
     const mainContainer = document.getElementById("main-container");
