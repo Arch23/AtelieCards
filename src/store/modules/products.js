@@ -2,11 +2,6 @@ const state = () => ({
     all: []
 });
 
-const getters = {
-    getProductCount: (state) => state.all.length,
-    getProductList: (state) => state.all
-};
-
 const mutations = {
     //products
     add(state, { name, description, flavors }) {
@@ -50,13 +45,12 @@ const mutations = {
         productToEdit.flavors.splice(flavorIndex, 1);
     },
 
-    recoverFromLocalStorage(state) {
-        state.all = JSON.parse(window.localStorage.getItem('productsToPrint'));
+    setProductList(state, newProductList) {
+        state.all = newProductList;
     }
 };
 
 export default {
     state,
-    getters,
     mutations
 };
