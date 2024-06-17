@@ -1,6 +1,6 @@
 export const expandFlavors = (productList) => {
     return productList.map((prod) => {
-        if (prod.flavors) {
+        if (prod.flavors.length != 0) {
             return prod.flavors.map((flavor) => {
                 return {
                     name: `${prod.name}\r\n${flavor}`,

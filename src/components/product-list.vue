@@ -4,7 +4,8 @@ import flavorsEditor from './flavors-editor.vue';
 defineProps(['appName']);
 import store from '../store';
 
-store.commit('setProductList', JSON.parse(window.localStorage.getItem('productsToPrint')));
+const savedProducts = JSON.parse(window.localStorage.getItem('productsToPrint'));
+store.commit('setProductList', savedProducts == null ? [] : savedProducts);
 
 const products = computed(() => store.state.products.all);
 

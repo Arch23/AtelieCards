@@ -21,7 +21,7 @@ const exportProducts = () => {
 
 const print = () => {
     saveProducts();
-    const url = './print/index.html';
+    const url = `${import.meta.env.BASE_URL}print/index.html`;
     window.open(url, '_blank');
 };
 
